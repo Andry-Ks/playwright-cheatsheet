@@ -52,6 +52,7 @@ test('DELETE request - remove user', async ({ request }) => {
   const response = await request.delete(`${backendURL}/user/123`);
 
   expect(response.status()).toBe(204); //No Content
+  //If it returns 200, it often returns JSON with the result of the deletion
 });
 
 //👽 HEAD request - check if resource exists, no response body
